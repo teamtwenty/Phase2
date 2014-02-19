@@ -5,6 +5,13 @@ int main (int argc, const char *argv[])
     FILE *source_file;
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
+    init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
+    int counter = 0;
+    while(counter <= 50)
+    {
+    	BOOLEAN get_source_line(FILE *source_file, source_name[MAX_FILE_NAME_LENGTH], date[DATE_STRING_LENGTH];);
+    	counter++;
+    }
     
    /* Missing Code Here */
     return 0;
