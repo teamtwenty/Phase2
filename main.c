@@ -32,8 +32,9 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     
     if (1) //This is missing a condition
     {
-		/*  Missing Code Here */
-        return (TRUE);
+	print_buffer[line_number];
+	line_number++;	/*  Missing Code Here **/
+      return (TRUE);
     }
     else
     {
