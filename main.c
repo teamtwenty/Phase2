@@ -7,6 +7,7 @@ int main (int argc, const char *argv[])
     char date[DATE_STRING_LENGTH];
     init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
     int counter = 0;
+
     while(counter <= 50)
     {
     	BOOLEAN get_source_line(FILE *source_file, source_name[MAX_FILE_NAME_LENGTH], date[DATE_STRING_LENGTH];);
@@ -18,13 +19,19 @@ int main (int argc, const char *argv[])
 }
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
-    time_t timer;
     FILE *file;
-    
+
+    source_name = *name;
+
+    time_t timer;
+    time(&timer);
+    printf("%s", ctime(&timer));
+
+
     /* Missing Code Here */
     return file;
 }
-BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
+/BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
 {
     char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
@@ -32,13 +39,14 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     
     if (1) //This is missing a condition
     {
-	print_buffer[line_number];
+	source_buffer[line_number];
 	line_number++;	/*  Missing Code Here **/
       return (TRUE);
     }
     else
     {
-        return (FALSE);
+       
+	 return (FALSE);
     }
 }
 
