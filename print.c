@@ -14,7 +14,8 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
     }
     if (strlen(line) > MAX_PRINT_LINE_LENGTH) 
     {
-        /* Missing Code Here */
+        strncpy(line, line, MAX_PRINT_LINE_LENGTH;
+
     }
     if (save_chp)
     {
