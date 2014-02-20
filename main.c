@@ -25,7 +25,8 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 
     time_t timer;
     time(&timer);
-    printf("%s", ctime(&timer));
+    
+    //printf("%s", ctime(&timer));
 
 
     /* Missing Code Here */

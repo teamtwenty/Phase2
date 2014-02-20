@@ -14,18 +14,22 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[])
     }
     if (strlen(line) > MAX_PRINT_LINE_LENGTH) 
     {
-        strncpy(line, line, MAX_PRINT_LINE_LENGTH;
-
+        save_chp = (line + MAX_PRINT_LINE_LENGTH);
+        save_ch = *save_chp;
+        *save_chp = '\0';
+        
     }
     if (save_chp)
     {
+        printf("%s",line);
+        *save_chp = save_ch;
         /* Missing Code Here */
     }
     /* Missing Code Here */
-    if (save_chp)
+   /* if (save_chp)
     {
-        /* Missing Code Here */
-    }
+         Missing Code Here
+    } */
 }
 static void print_page_header(char source_name[], char date[])
 {
