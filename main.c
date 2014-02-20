@@ -31,7 +31,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
     /* Missing Code Here */
     return file;
 }
-/BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
+BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
 {
     char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
