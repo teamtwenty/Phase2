@@ -20,11 +20,18 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     FILE *file;
     source_name = *name;
+    char date[26];
+    int i = 0;
 
     time_t timer;
     struct tm *timevar = time(&timer);
-    inttostring(dte, *timevar);
-    
+    itoa(*timevar, date, 10);
+    while(date[i] != '\0')
+    {
+    	dte[i] = date[i];
+    	i++;
+    }
+    dte[i] = '\0';
     //printf("%s", ctime(&timer));
     FILE *f = fopen(source_file_name, "w");
     printf("%s", dte);
