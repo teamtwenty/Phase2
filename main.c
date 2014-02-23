@@ -8,7 +8,7 @@ int main (int argc, const char *argv[])
     source_name = init_lister(*argv, source_name , date );
     int counter = 0;
 
-    while(get_source_line(source_file, source_name, date)
+    while(get_source_line(source_file, source_name, date))
     {
 
     }
