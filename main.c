@@ -46,10 +46,13 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
     static int line_number = 0;
     
-    if (1) //This is missing a condition
+    if (source_buffer[line_number] != '\0') //This is missing a condition
     {
 	source_buffer[line_number];
-	line_number++;	/*  Missing Code Here **/
+	line_number++;	
+	sprintf(line_number, '%d %s', source_buffer[line_number]);
+	print_line(source_buffer);
+	
       return (TRUE);
     }
     else
