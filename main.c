@@ -19,12 +19,12 @@ int main (int argc, const char *argv[])
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     FILE *file;
-    source_name = *name;
+    char source_name = *name;
     char date[26];
     int i = 0;
 
     time_t timer;
-    struct tm *timevar = time(&timer);
+    struct tm *timevar = localtime(&timer);
     itoa(*timevar, date, 10);
     while(date[i] != '\0')
     {
