@@ -35,6 +35,6 @@ static void print_page_header(char source_name[], char date[])
 {
     static int page_number = 1;
     
-    printf("%s", source_name[], date[]);
+    printf("%s", source_name, date);
     
 }
