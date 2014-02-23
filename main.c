@@ -27,7 +27,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
     
     //printf("%s", ctime(&timer));
     FILE *f = fopen(source_file_name, "w");
-    printf(dte);
+    printf("%s", dte);
 
 
     /* Missing Code Here */
