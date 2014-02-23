@@ -20,7 +20,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     FILE *file;
     char source_name = *name;
-    char date[26];
+    char *date[26];
     int i = 0;
 
     time_t timer;
