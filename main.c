@@ -5,10 +5,10 @@ int main (int argc, const char *argv[])
     FILE *source_file;
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
-    source_name = init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
+    source_name = init_lister(char *argv, source_name , char date );
     int counter = 0;
 
-    while(get_source_line(FILE *source_file, source_name, date))
+    while(get_source_line(*source_file, source_name, date)
     {
 
     }
