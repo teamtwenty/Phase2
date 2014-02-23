@@ -8,10 +8,9 @@ int main (int argc, const char *argv[])
     init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
     int counter = 0;
 
-    while(counter <= 50)
+    while(BOOLEAN get_source_line(FILE *source_file, source_name, date))
     {
-    	BOOLEAN get_source_line(FILE *source_file, source_name[MAX_FILE_NAME_LENGTH], date[DATE_STRING_LENGTH];);
-    	counter++;
+
     }
     
    /* Missing Code Here */
@@ -20,13 +19,15 @@ int main (int argc, const char *argv[])
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     FILE *file;
-
     source_name = *name;
 
     time_t timer;
-    time(&timer);
+    struct tm *timevar = time(&timer);
+    inttostring(dte, *timevar);
     
     //printf("%s", ctime(&timer));
+    FILE *f = fopen(source_file_name, "w");
+    printf(dte);
 
 
     /* Missing Code Here */
