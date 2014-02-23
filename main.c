@@ -25,7 +25,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 
     time_t timer;
     struct tm *timevar = localtime(&timer);
-    itoa(*timevar, date, 10);
+    char *itoa(*timevar, date, 10);
     while(date[i] != '\0')
     {
     	dte[i] = date[i];
