@@ -5,10 +5,10 @@ int main (int argc, const char *argv[])
     FILE *source_file;
     char source_name[MAX_FILE_NAME_LENGTH];
     char date[DATE_STRING_LENGTH];
-    init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
+    source_name = init_lister(char *argv[1], source_name[MAX_FILE_NAME_LENGTH], char date[DATE_STRING_LENGTH]);
     int counter = 0;
 
-    while(BOOLEAN get_source_line(FILE *source_file, source_name, date))
+    while(get_source_line(FILE *source_file, source_name, date))
     {
 
     }
@@ -51,7 +51,7 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])
 	source_buffer[line_number];
 	line_number++;	
 	sprintf(line_number, '%d %s', source_buffer[line_number]);
-	print_line(source_buffer);
+	print_line(line_number, src_name, todays_date );
 	
       return (TRUE);
     }
