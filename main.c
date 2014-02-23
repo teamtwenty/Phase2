@@ -20,12 +20,12 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
 {
     FILE *file;
     char source_name = *name;
-    char *date[26];
+    char date[26];
     int i = 0;
 
-    time_t timer;
+    time_t timer = time(0);
     struct tm *timevar = localtime(&timer);
-    char* itoa(timevar, *date, 10);
+    char* itoa(timevar, date, 10);
     while(date[i] != '\0')
     {
     	dte[i] = date[i];
