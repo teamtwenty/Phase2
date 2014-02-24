@@ -1,3 +1,12 @@
+/*equal work was done between all three of the group members
+
+Maxx Rodriguez
+Nick Simms
+Carlos Lopez
+
+*/
+
+
 #include "common.h"     //retreive information from common.h
 //*********************************************************************************
 static void print_page_header(char source_name[], char date[]);
