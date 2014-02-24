@@ -3,7 +3,7 @@
 int main (int argc, const char *argv[])
 {
     FILE *source_file;						
-    char source_name[MAX_FILE_NAME_LENGTH];	//Variable for incoming source code name
+    char source_name[MAX_FILE_NAME_LENGTH];	//Array for incoming source code 
     char date[DATE_STRING_LENGTH];
     source_file = init_lister(*argv, source_name , date );	
     int counter = 0;
