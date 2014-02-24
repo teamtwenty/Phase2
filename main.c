@@ -1,3 +1,14 @@
+/*equal work was done between all three of the group members
+
+Maxx Rodriguez
+Nick Simms
+Carlos Lopez
+
+*/
+
+
+
+
 #include "common.h" //Associate this file with common.h
 //*****************************************************************************
 int main (int argc, const char *argv[])
