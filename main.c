@@ -45,9 +45,9 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])	//forma
 }
 BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])	//Retrieves source line
 {
-    char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];
-    char source_buffer[MAX_SOURCE_LINE_LENGTH];
-    static int line_number = 0;
+    char print_buffer[MAX_SOURCE_LINE_LENGTH + 9];	
+    char source_buffer[MAX_SOURCE_LINE_LENGTH];		//sets capacity to max length
+    static int line_number = 0;		//starts at line 0
     
     if (source_buffer[line_number] != '\0') //This is missing a condition. Prints until the null terminator
     {
