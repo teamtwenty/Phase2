@@ -1,16 +1,16 @@
-#include "common.h"
+#include "common.h"     //retreive information from common.h
 //*********************************************************************************
 static void print_page_header(char source_name[], char date[]);
 
 void print_line(char line[], char source_name_to_print[], char date_to_print[]) //Formats printing
 {
     char save_ch;
-    char *save_chp = NULL;
-    static int line_count = MAX_LINES_PER_PAGE;
+    char *save_chp = NULL;  //points to null
+    static int line_count = MAX_LINES_PER_PAGE;     //capacity set to max lines
     
     if (++line_count > MAX_LINES_PER_PAGE) //Creates new page if max lines are exceeded
     {
-        print_page_header(source_name_to_print, date_to_print);
+        print_page_header(source_name_to_print, date_to_print);     //prints a new header
     }
     if (strlen(line) > MAX_PRINT_LINE_LENGTH) //truncates line if max length is exceeded
     {
@@ -21,7 +21,7 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[]) 
     }
     if (save_chp) //prints normally if no alteration are needed
     {
-        printf("%s",line);
+        printf("%s",line);      
         *save_chp = save_ch;    //pointer points to save_ch value
         /* Missing Code Here */
     }
@@ -33,8 +33,8 @@ void print_line(char line[], char source_name_to_print[], char date_to_print[]) 
 }
 static void print_page_header(char source_name[], char date[]) //prints the header
 {
-    static int page_number = 1;
+    static int page_number = 1;     //starts at page 1
     
-    printf("%s", source_name, date);
+    printf("%s", source_name, date); //prints name and date
     
 }
