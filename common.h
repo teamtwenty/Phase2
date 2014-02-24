@@ -1,3 +1,14 @@
+/*equal work was done between all three of the group members
+
+Maxx Rodriguez
+Nick Simms
+Carlos Lopez
+
+*/
+
+
+
+
 #ifndef CSE220_project2_common_h
 #define CSE220_project2_common_h
 //**********************************************************************
