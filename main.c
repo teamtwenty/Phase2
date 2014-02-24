@@ -5,10 +5,10 @@ int main (int argc, const char *argv[])
     FILE *source_file;						
     char source_name[MAX_FILE_NAME_LENGTH];	//Variable for incoming source code name
     char date[DATE_STRING_LENGTH];
-    source_file = init_lister(*argv, source_name , date );	//formatting for source file
+    source_file = init_lister(*argv, source_name , date );	
     int counter = 0;
 
-    while(get_source_line(source_file, source_name, date))
+    while(get_source_line(source_file, source_name, date)) //repeats until null terminator
     {
 
     }
@@ -16,15 +16,16 @@ int main (int argc, const char *argv[])
    /* Missing Code Here */
     return 0;
 }
-FILE *init_lister(const char *name, char source_file_name[], char dte[])
+FILE *init_lister(const char *name, char source_file_name[], char dte[])	//formats incoming source code
 {
     FILE *file;
     char source_name = *name;
     char date[26];
     int i = 0;
     int x = 10;
-
-    time_t timer = time(0);
+    
+    //Sets up timer and date
+    time_t timer = time(0);		
     struct tm *timevar = localtime(&timer);
     char* itoa(*timevar, date, x);
     while(date[i] != '\0')
@@ -33,6 +34,7 @@ FILE *init_lister(const char *name, char source_file_name[], char dte[])
     	i++;
     }
     dte[i] = '\0';
+    
     //printf("%s", ctime(&timer));
     FILE *f = fopen(source_file_name, "w");
     printf("%s", dte);
@@ -47,19 +49,19 @@ BOOLEAN get_source_line(FILE *src_file, char src_name[], char todays_date[])	//R
     char source_buffer[MAX_SOURCE_LINE_LENGTH];
     static int line_number = 0;
     
-    if (source_buffer[line_number] != '\0') //This is missing a condition
+    if (source_buffer[line_number] != '\0') //This is missing a condition. Prints until the null terminator
     {
 	source_buffer[line_number];	
 	line_number++;	
 	sprintf(line_number, '%d %s', source_buffer[line_number]);
 	print_line(line_number, src_name, todays_date );
 	
-      return (TRUE);
+      return (TRUE);	//returns 1 to continue looping
     }
     else
     {
        
-	 return (FALSE);	//False clause
+	 return (FALSE);	//exits loop and returns 0
     }
 }
 
